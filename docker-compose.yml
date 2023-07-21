@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  shapeengine.web:
+    image: ${DOCKER_REGISTRY-}shapeengine
+    build:
+      context: .
+      dockerfile: ShapeEngine.Web/Dockerfile
+    env_file:
+      - params.env
